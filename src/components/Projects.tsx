@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
-import { Github, ArrowUpRight, BookOpen, ShoppingCart, ListTodo, Atom } from 'lucide-react';
+import { Github, ArrowUpRight, BookOpen, ShoppingCart, ListTodo, Atom, Shield } from 'lucide-react';
 
 interface Project {
   title: string;
+  subtitle?: string;
   githubUrl: string;
   description: string;
   tags: string[];
@@ -28,6 +29,15 @@ export const Projects: React.FC = () => {
       tags: ["Python", "PostgreSQL", "Bootstrap"],
       bannerClass: "bg-gradient-to-br from-teal-950/60 to-emerald-950/60 border-b border-stroke/50",
       icon: <ShoppingCart className="w-12 h-12 text-teal-400 opacity-80" />
+    },
+    {
+      title: "Insurance CRM",
+      subtitle: "A modern, premium CRM platform tailored for insurance agents to track campaigns, manage client leads, and streamline administrative workflows.",
+      githubUrl: "https://github.com/AdarshR268/Insurance-CRM",
+      description: "Developed a responsive, dual-role Customer Relationship Management (CRM) web application featuring secure administrator-agent segregation, automated credential generation, AJAX-powered validation, and a glassmorphic user interface.",
+      tags: ["Django", "MySQL", "jQuery (AJAX)", "Bootstrap 4", "Vanilla CSS", "SMTP"],
+      bannerClass: "bg-gradient-to-br from-indigo-950/60 to-purple-950/60 border-b border-stroke/50",
+      icon: <Shield className="w-12 h-12 text-indigo-400 opacity-80" />
     },
     {
       title: "Task Management App",
@@ -55,7 +65,7 @@ export const Projects: React.FC = () => {
     if (lower.includes('mysql') || lower.includes('postgres') || lower.includes('postgresql')) {
       return 'bg-blue-500/10 text-blue-400 border-blue-500/20';
     }
-    if (lower.includes('javascript') || lower.includes('js')) {
+    if (lower.includes('javascript') || lower.includes('js') || lower.includes('jquery')) {
       if (lower.includes('react')) return 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20';
       return 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20';
     }
@@ -141,15 +151,22 @@ export const Projects: React.FC = () => {
             {/* Details Block */}
             <div className="p-6 md:p-8 flex flex-col flex-grow justify-between">
               <div>
-                <div className="flex justify-between items-center mb-3.5">
-                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-text-primary font-body">
-                    {project.title}
-                  </h3>
+                <div className="flex justify-between items-start mb-3.5">
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold tracking-tight text-text-primary font-body">
+                      {project.title}
+                    </h3>
+                    {project.subtitle && (
+                      <p className="text-xs text-text-primary/70 font-semibold mt-1 font-body leading-normal">
+                        {project.subtitle}
+                      </p>
+                    )}
+                  </div>
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-full border border-stroke bg-surface hover:bg-stroke/50 text-muted hover:text-text-primary transition-all duration-200 flex-shrink-0"
+                    className="p-2 rounded-full border border-stroke bg-surface hover:bg-stroke/50 text-muted hover:text-text-primary transition-all duration-200 flex-shrink-0 ml-4 mt-1"
                     aria-label="GitHub Repository"
                   >
                     <Github className="w-4 h-4" />
