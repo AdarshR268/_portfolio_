@@ -44,13 +44,13 @@ export const Hero: React.FC = () => {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
-        className="inline-flex items-center gap-2.5 px-4.5 py-1.5 rounded-full border border-stroke bg-surface/80 backdrop-blur-sm text-xs font-semibold text-text-primary tracking-wide shadow-sm mb-6"
+        className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-emerald-500/20 bg-emerald-500/5 dark:border-emerald-500/20 dark:bg-emerald-500/10 text-xs font-semibold text-emerald-600 dark:text-emerald-400 tracking-wide shadow-sm mb-6"
       >
-        <span className="relative flex h-2.5 w-2.5">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75" />
-          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success animate-pulse-glow" />
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
         </span>
-        Available for new opportunities
+        <span>Available for new opportunities</span>
       </motion.div>
 
       {/* Main Core Heading */}

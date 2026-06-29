@@ -10,15 +10,19 @@
     --muted: 240 4% 46%;
     --stroke: 240 6% 90%;
     --accent: 271 81% 56%;
+    --grid-color: rgba(168, 85, 247, 0.03);
+    --glow-color: rgba(168, 85, 247, 0.08);
   }
 
   .dark {
-    --bg: 240 10% 4%;
-    --surface: 240 10% 6%;
+    --bg: 265 40% 5%;
+    --surface: 265 30% 7%;
     --text: 0 0% 98%;
-    --muted: 240 5% 65%;
-    --stroke: 240 6% 15%;
+    --muted: 265 10% 65%;
+    --stroke: 265 25% 12%;
     --accent: 271 81% 70%;
+    --grid-color: rgba(168, 85, 247, 0.08);
+    --glow-color: rgba(168, 85, 247, 0.16);
   }
 
   html {

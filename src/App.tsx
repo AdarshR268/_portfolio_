@@ -6,8 +6,10 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
+import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { GridBackground } from './components/GridBackground';
 import gsap from 'gsap';
 
 function App() {
@@ -61,31 +63,39 @@ function App() {
 
       {/* Main Portfolio Content */}
       {!isLoading && (
-        <div className="page-content-wrapper min-h-screen flex flex-col justify-between selection:bg-text-primary/10 selection:text-text-primary">
+        <>
+          {/* Interactive grid background */}
+          <GridBackground />
+
           {/* Header Navigation floating pill */}
           <Navbar theme={theme} setTheme={setTheme} />
 
-          {/* Page Sections Layout */}
-          <main className="flex-grow">
-            {/* Section 2: Immersive Hero */}
-            <Hero />
+          <div className="page-content-wrapper min-h-screen flex flex-col justify-between selection:bg-text-primary/10 selection:text-text-primary">
+            {/* Page Sections Layout */}
+            <main className="flex-grow">
+              {/* Section 2: Immersive Hero */}
+              <Hero />
 
-            {/* Section 3: Professional Profile Architecture (About) */}
-            <About />
+              {/* Section 3: Professional Profile Architecture (About) */}
+              <About />
 
-            {/* Section 4: Technical Arsenal Blueprint (Skills) */}
-            <Skills />
+              {/* Section 4: Technical Arsenal Blueprint (Skills) */}
+              <Skills />
 
-            {/* Section 5: Engineering Works Catalog (Projects) */}
-            <Projects />
+              {/* Section 5: Engineering Works Catalog (Projects) */}
+              <Projects />
 
-            {/* Section 6: Direct Communications Portal (Contact) */}
-            <Contact />
-          </main>
+              {/* Section 6: Academic Journey Timeline (Education) */}
+              <Education />
 
-          {/* Section 7: Footer Signature Node */}
-          <Footer />
-        </div>
+              {/* Section 7: Direct Communications Portal (Contact) */}
+              <Contact />
+            </main>
+
+            {/* Section 7: Footer Signature Node */}
+            <Footer />
+          </div>
+        </>
       )}
     </>
   );
