@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
         transition={{ delay: 0.4, duration: 0.7 }}
         className="text-base md:text-xl font-light text-muted text-center max-w-2xl leading-relaxed mb-10 h-16 md:h-12 flex flex-col md:flex-row justify-center items-center gap-1 font-body"
       >
-        <span>Python Full Stack Developer Trainee specializing in building</span>
+        <span>Python Full Stack Developer specializing in building</span>
         <div className="h-8 md:h-full relative flex items-center justify-center overflow-hidden min-w-[150px] font-semibold text-text-primary">
           <AnimatePresence mode="wait">
             <motion.span
